@@ -1,11 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// Setup: total access, the badge that opens everything.
-const SETUP = "My badge opens every door in this building";
-// Punch: except the one door that actually matters.
-const PUNCH = "except the one to the meeting I'm actually invited to.";
-
-const line = `${SETUP} ${PUNCH}`;
+const line = "Our coffee machine's descale warning has been blinking so long "
+  + "it's now the closest thing this office has to a long-term plan.";
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", line);
+writeFileSync("/output/entry.txt", line, "utf8");
